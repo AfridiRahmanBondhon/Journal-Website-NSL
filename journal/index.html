@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+  <title>Nogor Journal</title>
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawsome/css/all.min.css">
+  <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+  <!-- header part start -->
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-lg-4 align-self-center">
+          <div class="left_logo">
+            <a href="">
+              <img src="images/main_logo.png" alt="main_logo" width="200">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-8 align-self-center">
+          <div class="right_information d-flex justify-content-end align-items-center">
+            <div class="notification">
+              <i class="fas fa-bell"></i>
+              <sup>5</sup>
+            </div>
+            <div class="prf">
+              <img src="images/profile.jpg" alt="profile">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header part end -->
+
+  <!-- mobile menu start -->
+  <div class="mobile_menus d-block d-lg-none">
+    <div class="container">
+      <div class="mobile_menu">
+        <i class="fas fa-bars"></i> <span>Menu</span>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu end -->
+
+  <!-- main part start -->
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xl-3">
+          <div class="left_sidebar">
+            <div class="profile_widget position-relative">
+              <div class="mobile_sidebar_close d-block d-lg-none"><i class="fas fa-times"></i></div>
+              <div class="image">
+                <figure>
+                  <img src="images/profile.jpg" alt="profile" class="img-fluid">
+                  <div class="file_upload">
+                    <input type="file" class="d-none" id="actual-btn">
+                    <label for="actual-btn"><i class="fas fa-camera"></i></label>
+                  </div>
+                </figure>
+              </div>
+              <div class="text">
+                <h4>Adolfo Swinney</h4>
+                <span>Author</span>
+              </div>
+            </div>
+            <ul class="main_menu list-unstyled">
+              <li class="active">
+                <a href="index.html">
+                  <i class="fas fa-home"></i>
+                  <h5>Dashboard</h5>
+                </a>
+              </li>
+              <li>
+                <a href="profile.html">
+                  <i class="far fa-user-circle"></i>
+                  <h5>Profile</h5>
+                </a>
+              </li>
+              <li>
+                <a href="submission.html">
+                  <i class="far fa-folder-open"></i>
+                  <h5>Submission</h5>
+                  <span class="float-end">10</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="change-password.html">
+                  <i class="fas fa-unlock"></i>
+                  <h5>Change Password</h5>
+                </a>
+              </li>
+              <li>
+                <a href="notification.html">
+                  <i class="fas fa-bell"></i>
+                  <h5>Notification</h5>
+                  <span class="float-end">10</span>
+                </a>
+              </li>
+              <li>
+                <a href="login.html">
+                  <i class="fas fa-power-off"></i>
+                  <h5 class="logout">Logout</h5>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="right_info">
+            <div class="dashboard_info">
+              <div class="top_short_info">
+                <div class="row g-4">
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="short_info_item">
+                      <div class="media">
+                        <div class="icon-wrap bg-warning"><i class="far fa-folder-open"></i></div>
+                        <div class="count-detail">
+                          <h3><span class="counter mr-5">500</span></h3>
+                          <p>Total Submission</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="short_info_item">
+                      <div class="media">
+                        <div class="icon-wrap bg-success"><i class="fas fa-wallet"></i></div>
+                        <div class="count-detail">
+                          <h3><span class="counter mr-5">20</span></h3>
+                          <p>Total Published</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="short_info_item">
+                      <div class="media">
+                        <div class="icon-wrap bg-info"><i class="far fa-times-circle"></i></div>
+                        <div class="count-detail">
+                          <h3><span class="counter mr-5">10</span></h3>
+                          <p>Total Rejected</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="common_block">
+                <h4 class="common__title">Recent Submission</h4>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-striped mb-0">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Sl</th>
+                        <th>Title</th>
+                        <th>Current Status</th>
+                        <th>Submission Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="min-width: 40px;">01</td>
+                        <td style="min-width: 220px;">Now you can have the philosophy</td>
+                        <td style="min-width: 130px;"><span class="badge bg-danger">Pending</span></td>
+                        <td style="min-width: 160px;">May 24, 2022</td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Now you can have the philosophy</td>
+                        <td><span class="badge bg-success">Complete</span></td>
+                        <td>May 24, 2022</td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Now you can have the philosophy</td>
+                        <td><span class="badge bg-danger">Pending</span></td>
+                        <td>May 24, 2022</td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Now you can have the philosophy</td>
+                        <td><span class="badge bg-success">Complete</span></td>
+                        <td>May 24, 2022</td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Now you can have the philosophy</td>
+                        <td><span class="badge bg-danger">Pending</span></td>
+                        <td>May 24, 2022</td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Now you can have the philosophy</td>
+                        <td><span class="badge bg-success">Complete</span></td>
+                        <td>May 24, 2022</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="common_block">
+                <h4 class="common__title">Download Forms</h4>
+                <div class="row mt-2">
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <h5 class="sub__header">Initial Submission:</h5>
+                      <ul class="downloaded_files list-unstyled">
+                        <li><a href="">Manuscript Template</a></li>
+                        <li><a href="">Attestation on...</a></li>
+                        <li><a href="">Author Personal...</a></li>
+                        <li><a href="">Prospective Reviewers...</a></li>
+                      </ul>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6 mt-4 mt-lg-0">
+                    <fieldset>
+                      <h5 class="sub__header">After Acceptance:</h5>
+                      <ul class="downloaded_files list-unstyled">
+                        <li><a href="">Response to...</a></li>
+                        <li><a href="">Author Personal...</a></li>
+                      </ul>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- main part end -->
+
+  <!-- footer part start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <p>Copyright ©2023 Journal management and Peer review system</p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <p>Developed By: <a href="">Nogor Solutions Limited</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer part end -->
+
+  <!-- all js link -->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Poppins:wght@300;400;500&display=swap');
+
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  @include font(16px, 400);
+  line-height: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+li,
+table {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+a h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+}
+
+span,
+small {
+  display: inline-block;
+}
+
+button,
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+label,
+::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  @include font(16px, 400);
+  color: $black;
+  font-family: 'Fraunces', serif;
+}
+
+::selection {
+  background-color: $secondary;
+  color: $white;
+}
+
+.common_title {
+  margin-bottom: 50px;
+
+  span {
+    color: $secondary;
+    @include font(16px, 700);
+    text-transform: uppercase;
+    letter-spacing: 2px
+  }
+
+  h2 {
+    @include font(36px, 600);
+    margin-top: 10px;
+    color: #343f52;
+    position: relative;
+    display: inline-block;
+  }
+
+  .common_title_shape {
+    position: absolute;
+    top: -20px;
+    right: -25px;
+    width: 30px;
+  }
+}
+
+
+// line limit start
+.line-limit-1 {
+  @include line_limit(1 !important);
+}
+
+.line-limit-2 {
+  @include line_limit(2 !important);
+}
+
+.line-limit-3 {
+  @include line_limit(3 !important);
+}
+
+.line-limit-4 {
+  @include line_limit(4 !important);
+}
+
+.line-limit-6 {
+  @include line_limit(6 !important);
+}
+
+.line-limit-7 {
+  @include line_limit(7 !important);
+}
+
+.line-limit-8 {
+  @include line_limit(8 !important);
+}
+
+.line-limit-9 {
+  @include line_limit(9 !important);
+}
+
+.line-limit-10 {
+  @include line_limit(10 !important);
+}
+
+// common btn
+
+
+.cta {
+  display: flex;
+  padding: 13px 24px;
+  text-decoration: none;
+  @include font(16px, 500);
+  color: white;
+  background: #6225E6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 $white;
+  transform: skewX(-15deg);
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+  }
+}
+
+button.cta {
+  box-shadow: 6px 6px 0 $black;
+}
+
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.cta .span {
+  transform: skewX(15deg)
+}
+
+.cta .second {
+  width: 15px;
+  margin-left: 0px;
+  position: relative;
+  top: -1px;
+}
+
+.cta .one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.cta .two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #FBC638;
+  }
+
+  100% {
+    fill: white;
+  }
+}

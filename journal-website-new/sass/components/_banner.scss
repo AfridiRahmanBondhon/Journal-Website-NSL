@@ -1,0 +1,75 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.banner {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-color: $primary;
+  position: relative;
+  margin-top: -10px;
+  position: relative;
+  overflow: hidden;
+
+  .banner_shape_bg{
+    fill: #091e69;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 150%;
+  }
+
+  .banner_content {
+    position: relative;
+    z-index: 99;
+    padding-top: 6rem;
+    padding-bottom: 2.25rem;
+    min-height: 723px;
+  }
+
+  .text {
+    position: relative;
+
+    .banner_shape {
+      position: absolute;
+    }
+
+    .shape_1 {
+      top: -30px;
+      left: -39px;
+      width: 50px;
+    }
+
+    .shape_2 {
+      right: -87px;
+      bottom: 0;
+      width: 100px
+    }
+
+    h1 {
+      @include font(52px, 600);
+      margin-bottom: 20px;
+      color: $white;
+    }
+
+    p {
+      @include font(20px, 400);
+      line-height: 34px;
+      color: #e4e6eb;
+      margin-bottom: 40px;
+    }
+  }
+
+  .image {
+    position: relative;
+    z-index: 9;
+  }
+
+  .divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

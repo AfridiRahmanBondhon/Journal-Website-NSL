@@ -1,0 +1,104 @@
+.testimonial-area-one {
+  padding-top: 100px;
+}
+
+.testimonial-area-slider-one .testimonial-item-one {
+  margin: 0 15px;
+}
+
+.testimonial-item-one {
+  padding: 40px;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
+  position: relative;
+}
+
+.testimonial-item-one .quote-icon {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.testimonial-item-one .testimonial-avatar .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.testimonial-item-one .testimonial-avatar .image img {
+  border-radius: 50%;
+}
+
+.testimonial-item-one .testimonial-avatar .text {
+  margin-left: 20px;
+}
+
+.testimonial-item-one .testimonial-avatar .text h4 {
+  font-size: 24px;
+}
+
+.testimonial-item-one .testimonial-avatar .text p {
+  margin-top: 5px;
+}
+
+.testimonial-item-one .testimonial-info {
+  margin-top: 40px;
+}
+
+.testimonial-item-one .testimonial-info .rating {
+  margin-bottom: 20px;
+}
+
+.testimonial-item-one .testimonial-info .rating i {
+  color: $secondary;
+  font-size: 14px;
+}
+
+.testimonial-area-slider-one .slick-dots {
+  list-style: none;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-area-slider-one .slick-dots li {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.testimonial-area-slider-one .slick-dots li button {
+  font-size: 0;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+}
+
+.testimonial-area-slider-one .slick-dots li button::before {
+  width: 24px;
+  height: 24px;
+  border: 2px solid red;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.testimonial-area-slider-one .slick-dots .slick-active button::before {
+  opacity: 1;
+}
+
+.testimonial-area-slider-one .slick-list {
+  padding: 20px 0;
+  margin: -20px 0;
+}

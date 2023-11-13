@@ -1,0 +1,328 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.submission__file {
+  background-color: $secondary;
+  color: $white;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 3px;
+}
+
+.view__submission {
+  background-color: $primary;
+  color: $white;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.common__btn__ {
+  background-color: #00ADEF;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px 16px;
+  transition: all linear 0.2s;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
+.input__groups {
+  label {
+    margin-bottom: 5px;
+    @include font(15px, 600);
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #b1b1b1;
+    border-radius: 3px;
+    padding: 0 12px;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid #b1b1b1;
+    border-radius: 3px;
+    padding: 12px;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}
+
+.submit__submission {
+  background-color: $secondary;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px 24px;
+  transition: all linear 0.2s;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  border: 0;
+}
+
+.document__submission__pdf {
+  label {
+    margin-bottom: 5px;
+    @include font(15px, 600);
+  }
+
+  .document__submission__widget {
+    background-color: #F7F8FC;
+    border: 2px dashed #e0e0e0;
+    border-radius: 3px;
+    padding: 30px;
+
+    h6 {
+      @include font(17px, 600);
+      margin-bottom: 8px;
+    }
+
+    label {
+      color: $primary;
+      @include font(17px, 600);
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.uploaded__pdf__file {
+  padding: 10px 20px;
+  background: #ebe6d7;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  .text {
+    h5 {
+      @include font(17px, 500);
+    }
+
+    small {
+      color: $secondary;
+      font-size: 14px;
+    }
+  }
+
+  .delete {
+    i {
+      cursor: pointer;
+      color: $secondary;
+    }
+  }
+}
+
+.conversation__panel {
+  background-color: #F5F8FA;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+
+  .simplebar__content {
+    padding: 15px;
+    overflow-y: auto;
+    height: 400px;
+
+    li+li {
+      margin-top: 14px;
+    }
+
+    .user-msgbox {
+      max-width: 70%;
+      width: fit-content;
+
+      .media {
+        display: flex;
+        align-items: flex-start;
+
+        .media-body {
+          flex: 1;
+
+          span {
+            @include font(12px, 400);
+            position: relative;
+            top: -5px;
+            font-style: italic;
+          }
+
+          p {
+            background-color: $primary;
+            color: $white;
+            padding: 3px 20px;
+            padding-bottom: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              top: 6px;
+              left: -5px;
+              width: 20px;
+              height: 20px;
+              background-color: $primary;
+              content: "";
+              border-radius: 1px;
+              transform: rotate(45deg);
+            }
+
+            small {
+              @include font(12px, 500);
+              line-height: 14px;
+            }
+          }
+        }
+
+        img {
+          margin-inline-end: 20px;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .admin-msgbox {
+      margin-inline-start: auto;
+      max-width: 70%;
+      width: fit-content;
+
+      .media {
+        display: flex;
+        align-items: flex-start;
+
+        .media-body {
+          flex: 1;
+
+          span {
+            @include font(12px, 400);
+            position: relative;
+            top: -5px;
+            font-style: italic;
+          }
+
+          p {
+            background-color: $primary;
+            color: $white;
+            padding: 3px 20px;
+            padding-bottom: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              top: 6px;
+              right: -5px;
+              width: 20px;
+              height: 20px;
+              background-color: $primary;
+              content: "";
+              border-radius: 1px;
+              transform: rotate(45deg);
+            }
+
+            small {
+              @include font(12px, 500);
+              line-height: 14px;
+            }
+          }
+        }
+
+        img {
+          margin-inline-start: 20px;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.attachment__panel {
+  width: 100%;
+  padding: 4px 15px;
+  background-color: #F5F8FA;
+  margin-top: 24px;
+  border-radius: 5px;
+  border: 1px solid $black;
+
+  .input_groups {
+    flex-grow: 1;
+
+    input {
+      width: 100%;
+      height: 52px;
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  .option {
+    padding-left: 70px;
+
+    .file {
+      label {
+        background-color: $black;
+        color: $white;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+      }
+    }
+
+    .sent {
+      button {
+        background-color: $primary;
+        color: $white;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+        border: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .uploaded__file {
+    margin-right: 24px;
+    position: relative;
+
+    i {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      cursor: pointer;
+      color: $secondary;
+    }
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

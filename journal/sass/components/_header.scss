@@ -1,0 +1,62 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+header {
+  background-color: $white;
+  box-shadow: inset 0px -1px 0px #eee;
+  padding: 20px 0;
+
+  .container-fluid {
+    padding: 0 30px;
+
+    .right_information {
+      .notification {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(12, 64, 121, 0.09);
+        color: $black;
+        position: relative;
+        transition: all 0.5s ease;
+        margin-right: 20px;
+
+        sup {
+          @include font(14px, 600);
+        }
+      }
+
+      .prf {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.mobile_menus {
+  padding-top: 5px;
+  position: relative;
+  z-index: 9;
+
+  .mobile_menu {
+    display: inline-block;
+    cursor: pointer;
+    @include font(17px, 500);
+
+    span {
+      margin-left: 5px;
+      font-size: 19px;
+    }
+  }
+}

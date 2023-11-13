@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+  <title>Nogor Journal</title>
+  <!--all css link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawsome/css/all.min.css">
+  <link rel="stylesheet" href="fontawsome/css/fontawesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+  <!-- header part start -->
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-lg-4 align-self-center">
+          <div class="left_logo">
+            <a href="">
+              <img src="images/main_logo.png" alt="main_logo" width="200">
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-8 align-self-center">
+          <div class="right_information d-flex justify-content-end align-items-center">
+            <div class="notification">
+              <i class="fas fa-bell"></i>
+              <sup>5</sup>
+            </div>
+            <div class="prf">
+              <img src="images/profile.jpg" alt="profile">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header part end -->
+
+  <!-- mobile menu start -->
+  <div class="mobile_menus d-block d-lg-none">
+    <div class="container">
+      <div class="mobile_menu">
+        <i class="fas fa-bars"></i> <span>Menu</span>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu end -->
+
+
+  <!-- main part start -->
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xl-3">
+          <div class="left_sidebar">
+            <div class="profile_widget position-relative">
+              <div class="mobile_sidebar_close d-block d-lg-none"><i class="fas fa-times"></i></div>
+              <div class="image">
+                <figure>
+                  <img src="images/profile.jpg" alt="profile" class="img-fluid">
+                  <div class="file_upload">
+                    <input type="file" class="d-none" id="actual-btn">
+                    <label for="actual-btn"><i class="fas fa-camera"></i></label>
+                  </div>
+                </figure>
+              </div>
+              <div class="text">
+                <h4>Adolfo Swinney</h4>
+                <span>Author</span>
+              </div>
+            </div>
+            <ul class="main_menu list-unstyled">
+              <li>
+                <a href="index.html">
+                  <i class="fas fa-home"></i>
+                  <h5>Dashboard</h5>
+                </a>
+              </li>
+              <li>
+                <a href="profile.html">
+                  <i class="far fa-user-circle"></i>
+                  <h5>Profile</h5>
+                </a>
+              </li>
+              <li class="active">
+                <a href="submission.html">
+                  <i class="far fa-folder-open"></i>
+                  <h5>Submission</h5>
+                  <span class="float-end">10</span>
+                </a>
+              </li>
+              <li>
+                <a href="change-password.html">
+                  <i class="fas fa-unlock"></i>
+                  <h5>Change Password</h5>
+                </a>
+              </li>
+              <li>
+                <a href="notification.html">
+                  <i class="fas fa-bell"></i>
+                  <h5>Notification</h5>
+                  <span class="float-end">10</span>
+                </a>
+              </li>
+              <li>
+                <a href="login.html">
+                  <i class="fas fa-power-off"></i>
+                  <h5 class="logout">Logout</h5>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="right_info">
+            <div class="dashboard_info">
+              <div class="common_block">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h4 class="common__title">Make a Submission</h4>
+                </div>
+                <form action="#">
+                  <div class="row">
+                    <div class="col-lg-12 mb-4">
+                      <div class="input__groups">
+                        <label>Submission Title</label>
+                        <input type="text" placeholder="Title">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 mb-2">
+                      <div class="document__submission__pdf">
+                        <label>With Author <sup class="text-danger">*</sup></label>
+                        <div class="document__submission__widget text-center">
+                          <input class="d-none" type="file" id="file">
+                          <h6><label for="file">Click Here</label> to Upload documents</h6>
+                          <p>Document file size does not exceed 20 MB and you can upload any document file format for
+                            users to download</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                      <div class="uploaded__pdf__file d-flex justify-content-between">
+                        <div class="info d-flex">
+                          <div class="icon"><img src="images/file.svg" alt=""></div>
+                          <div class="text ms-4">
+                            <h5>Medixo - Medical Hospital Admin Template (1).pdf</h5>
+                            <small>33 KB</small>
+                          </div>
+                        </div>
+                        <div class="delete text-end ms-4"><i class="fas fa-trash-alt"></i></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="document__submission__pdf">
+                        <label>Without Author <sup class="text-danger">*</sup></label>
+                        <div class="document__submission__widget text-center">
+                          <input class="d-none" type="file" id="file">
+                          <h6><label for="file">Click Here</label> to Upload documents</h6>
+                          <p>Document file size does not exceed 20 MB and you can upload any document file format for
+                            users to download</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                      <div class="uploaded__pdf__file d-flex justify-content-between">
+                        <div class="info d-flex">
+                          <div class="icon"><img src="images/file.svg" alt=""></div>
+                          <div class="text ms-4">
+                            <h5>Medixo - Medical Hospital Admin Template (1).pdf</h5>
+                            <small>33 KB</small>
+                          </div>
+                        </div>
+                        <div class="delete text-end ms-4"><i class="fas fa-trash-alt"></i></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+                      <div class="input__groups">
+                        <label>Abstract <sup class="text-danger">*</sup></label>
+                        <textarea rows="4"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="submit__submission">Submit Paper</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- main part end -->
+
+  <!-- footer part start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <p>Copyright ©2023 Journal management and Peer review system</p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <p>Developed By: <a href="">Nogor Solutions Limited</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer part end -->
+
+
+
+
+  <!-- all js link -->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

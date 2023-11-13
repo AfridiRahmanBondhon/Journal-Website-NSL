@@ -1,0 +1,309 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.website_header {
+  padding: 20px 0;
+  border: none !important;
+  left: 0;
+  z-index: 999;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  background-color: $primary;
+
+  nav {
+    ul {
+      li {
+        margin-left: 24px;
+
+        a {
+          @include font(17px, 500);
+          color: $white;
+
+          &:hover {
+            color: $secondary !important;
+          }
+        }
+
+        .active {
+          color: $secondary !important;
+        }
+      }
+    }
+  }
+}
+
+.sticky-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  border-radius: 0;
+  padding: 5px 0;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+  nav {
+    padding: 16px 0;
+  }
+}
+
+#header-fixed-height.active-height {
+  display: block;
+  height: 100px;
+}
+
+
+// mobile menu start
+.mobile-menu-area {
+  z-index: 999;
+  background-color: $white;
+  width: 100%;
+  transition: all linear 0.2s;
+}
+
+.mobile-menu-area .mobile-topbar {
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.mobile-menu-area .mobile-topbar .bars i {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid $white;
+  color: $white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mobile-menu-area .mobile-topbar .bars i:hover {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.mobile-menu-area .mobile-topbar .icon i {
+  width: 45px;
+  height: 45px;
+  background-color: $white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-area .mobile-topbar .icon i:hover {
+  background-color: $secondary;
+  color: $white;
+  border-color: $secondary;
+}
+
+.mobile-menu-area .mobile-menu-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.mobile-menu-area .mobile-menu-main {
+  width: 320px;
+  height: 100%;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  z-index: 999;
+  overflow-y: scroll;
+  transition-duration: 0.3s;
+}
+
+.mobile-menu-area .mobile-menu-main .logo {
+  padding: 20px;
+}
+
+.mobile-menu-area .mobile-menu-main .close-mobile-menu {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.mobile-menu-area .mobile-menu-main .close-mobile-menu i {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: $black;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+  transition: 0.3s;
+}
+
+.mobile-menu-area .mobile-menu-main .close-mobile-menu i:hover {
+  color: $secondary;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list {
+  padding-top: 10px;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a {
+  font-size: 17px;
+  font-weight: 500;
+  color: $black;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding: 0px 20px;
+  line-height: 40px;
+  padding-right: 10px;
+  transition: all linear 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li:last-child a {
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover {
+  color: $secondary;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a i {
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  transition: all linear 0.2s;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li a:hover i {
+  background-color: $secondary;
+  color: $white;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul {
+  padding-left: 0;
+  display: none;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul a {
+  padding: 0px 20px;
+  padding-left: 40px;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .menu-list ul li ul li:last-child a {
+  border-bottom: 0;
+}
+
+.mobile-menu-area .mobile-menu-main .menu-body .social-icon ul li {
+  display: inline-block;
+}
+
+.mobile-menu-area .mobile-menu-main .social-icon {
+  padding: 20px;
+  text-align: center;
+}
+
+.mobile-menu-area .mobile-menu-main .social-icon ul li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.mobile-menu-area .mobile-menu-main .social-icon ul li a {
+  width: 36px;
+  height: 36px;
+  color: $black;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.mobile-menu-area .mobile-menu-main .social-icon ul li a:hover {
+  background-color: $secondary;
+  color: $white;
+  border-color: $secondary;
+}
+
+.mobile-menu-overlay {
+  transition-duration: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mobile-menu-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu-main.active {
+  right: 0 !important;
+}
+
+.mobile-menu-area .mobile-menu-search {
+  padding: 0 20px 16px;
+}
+
+.mobile-menu-area .mobile-menu-search input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 20px;
+  transition: 0.3s;
+  background-color: #f2f2f2;
+}
+
+.mobile-menu-area .mobile-menu-search input:focus {
+  border-color: $black;
+}
+
+.mobile-menu-area .mobile-menu-search .input-groups button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+}
+
+.mobile-menu-area .menu-action-btn {
+  padding: 20px;
+}
+
+.mobile-menu-area .menu-action-btn a {
+  font-weight: 700;
+  color: $white;
+  background-color: $secondary;
+  padding: 12px 30px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu-area .menu-action-btn a:hover {
+  background-color: $black;
+}
+
+.mobile-menu-area .menu-action-btn a i {
+  font-size: 14px;
+  margin-left: 8px;
+}

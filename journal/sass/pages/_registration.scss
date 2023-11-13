@@ -1,0 +1,218 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.registration_page {
+  .left_side {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: $black;
+    display: flex;
+    padding: 50px 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+
+    .image {
+      margin-top: 100px;
+    }
+
+    .info {
+      margin-top: 80px;
+      text-align: center;
+
+      h4 {
+        @include font(34px, 700);
+        color: $white;
+      }
+
+      h5 {
+        @include font(27px, 400);
+        color: $primary;
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .right_side {
+    padding: 50px;
+
+    .top_title {
+      text-align: center;
+      margin-bottom: 40px;
+
+      h2 {
+        @include font(36px, 600);
+        margin-bottom: 10px
+      }
+
+      h4 {
+        @include font(28px, 600);
+      }
+    }
+
+    fieldset {
+      border: 1px solid $primary;
+      padding: 30px;
+      position: relative;
+      background-color: #f2f2f2;
+
+      .title {
+        display: inline-block;
+        position: absolute;
+        top: -16px;
+        background-color: $primary;
+        padding: 3px 14px 5px;
+        left: 14px;
+        border-radius: 4px;
+
+        h5 {
+          color: $white;
+          @include font(17px, 600);
+        }
+      }
+
+      .input-groups {
+        input {
+          width: 100%;
+          height: 45px;
+          border: 1px solid #b1b1b1;
+          border-radius: 3px;
+          padding: 0 12px;
+
+          &:focus {
+            border-color: $primary;
+          }
+
+          &::placeholder {
+            @include font(16px, 400);
+          }
+        }
+      }
+    }
+
+    fieldset+fieldset {
+      margin-top: 30px;
+    }
+
+    .profile_image_upload {
+      .image-box {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+
+        img {
+          border-radius: 50%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 50%;
+          transition: all linear .2s;
+          opacity: 0;
+
+          .close {
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+          }
+        }
+
+        &:hover {
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+
+      .upload-box {
+        margin-left: 24px;
+        flex-grow: 1;
+
+        label {
+          border: 1px solid $primary;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          color: #53627d;
+          text-align: center;
+          height: 45px;
+          border-radius: 3px;
+          line-height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          background-color: #fff;
+
+          i {
+            font-size: 18px;
+            line-height: 1;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    .select2-container .select2-selection--single {
+      height: 45px;
+      width: 100%;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      line-height: 40px;
+      @include font(16px, 400);
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 45px;
+      right: 4px;
+    }
+
+    .select2.select2-container {
+      width: 100% !important;
+    }
+
+    .form-check-label {
+      cursor: pointer;
+    }
+
+    .form-check-input {
+      border-color: $black !important;
+    }
+
+    .form-check-input:checked {
+      background-color: $primary;
+      border-color: $primary !important;
+    }
+
+    .submit_btn {
+      background-color: $primary;
+      border-radius: 4px;
+      padding: 12px 30px;
+      text-align: center;
+      min-width: 320px;
+      border: 0;
+      color: $white;
+      margin-top: 30px;
+      transition: all linear .2s;
+      @include font(18px, 600);
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.order_now {
+  margin-top: 100px;
+
+  .image {
+    .main-image {
+      .shape {
+        animation: round-01 7s linear infinite;
+      }
+      .main_image{
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 80px;
+      }
+    }
+  }
+
+  @keyframes round-01 {
+    0% {
+      transform: rotate(15deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(15deg);
+    }
+  }
+
+  .form_main {
+
+    .input-group {
+      margin-bottom: 20px;
+      @include font(15px, 500);
+
+      label {
+        @include font(14px, 500);
+        margin-bottom: 4px;
+      }
+    }
+
+    .input-group input {
+      width: 100%;
+      border-radius: 5px !important;
+      height: 60px;
+      border: 1px solid #bebebe;
+      padding: 0 24px;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: $black;
+    }
+
+    .input-group textarea {
+      width: 100%;
+      border-radius: 5px !important;
+      height: 175px;
+      border: 1px solid #bebebe;
+      padding: 24px;
+      resize: none;
+      transition: 0.3s;
+      @include font(15px, 500);
+    }
+
+    .input-group textarea:focus {
+      border-color: $black;
+    }
+
+  }
+}

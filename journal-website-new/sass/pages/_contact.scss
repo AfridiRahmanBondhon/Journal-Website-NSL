@@ -1,0 +1,103 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.contact {
+  padding-top: 100px;
+}
+
+.contact .section-title-one {
+  margin-bottom: 20px;
+}
+
+.contact .short-description {
+  margin-bottom: 30px;
+}
+
+.contact .contact-form .input-group {
+  margin-bottom: 20px;
+}
+
+.contact .contact-form .input-group input {
+  width: 100%;
+  border-radius: 5px;
+  height: 60px;
+  border: 1px solid #bebebe;
+  padding: 0 30px;
+  transition: 0.3s;
+}
+
+.contact .contact-form .input-group input:focus {
+  border-color: $black;
+}
+
+.contact .contact-form .input-group textarea {
+  width: 100%;
+  border-radius: 5px;
+  height: 175px;
+  border: 1px solid #bebebe;
+  padding: 30px;
+  resize: none;
+  transition: 0.3s;
+}
+
+.contact .contact-form .input-group textarea:focus {
+  border-color: $black;
+}
+
+.contact .contact-form .submit-btn {
+  margin-top: 10px;
+  background-color: $secondary;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: $white;
+  padding: 15px 40px;
+  border: 0;
+  @include font(15px, 600);
+  text-transform: uppercase;
+}
+
+.contact .contact-form .submit-btn:hover {
+  background-color: $black;
+}
+
+.contact .contact-information {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 100px 60px;
+}
+
+.contact .contact-information .contact-info-item+.contact-info-item {
+  margin-top: 60px;
+}
+
+.contact .contact-information .contact-info-item ul {
+  display: flex;
+}
+
+.contact .contact-information .contact-info-item ul .icon {
+  margin-right: 20px;
+}
+
+.contact .contact-information .contact-info-item ul .icon i {
+  font-size: 25px;
+  color: $secondary;
+  margin-top: 3px;
+}
+
+.contact .contact-information .contact-info-item ul .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact .contact-information .contact-info-item p {
+  margin-top: 5px;
+
+  a {
+    color: $black;
+    transition: 0.3s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

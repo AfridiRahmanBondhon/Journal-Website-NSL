@@ -1,0 +1,53 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.features_list {
+  padding-top: 100px;
+
+  .accordion-item {
+    border-bottom: 0;
+  }
+
+  .accordion-button {
+    margin-top: 14px;
+    position: relative;
+    @include font(16px, 500);
+    border: 1px solid #ddd;
+    background-color: $white;
+    border-radius: 5px !important;
+    padding: 10px 10px;
+    padding-left: 52px;
+    line-height: 28px;
+
+    &:focus {
+      box-shadow: none;
+      background-color: $white;
+    }
+
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: 20px;
+      content: "\f058";
+      font-family: "Font Awesome 5 Free";
+      color: $secondary;
+    }
+  }
+
+  .accordion-body {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .accordion-button::after {
+    background-image: none;
+    content: "+";
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: none;
+    background-image: none;
+    content: "-";
+  }
+}

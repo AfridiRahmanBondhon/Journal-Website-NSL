@@ -1,0 +1,141 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.website_footer {
+  padding: 80px 0 30px 0;
+  margin-top: 100px;
+  background-color: $white;
+  background-color: #F5EDDE;
+
+  .widget {
+    .widget-title {
+      @include font(22px, 600);
+      margin-bottom: 24px !important;
+    }
+
+    a {
+      color: $black;
+      transition: 0.3s;
+      @include font(16px, 500);
+      margin-bottom: 5px;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .list-unstyled {
+      li {
+        margin-bottom: 16px;
+      }
+    }
+
+    .social {
+      a {
+        color: $black;
+        margin-right: 20px;
+        transition: 0.3s;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .subscribe {
+      .input_groups {
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 50px;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+          transition: 0.3s;
+          padding: 0 20px;
+
+          &:focus {
+            border-color: rgba(0, 0, 0, 0.5)
+          }
+        }
+
+        button {
+          background-color: $black;
+          color: $white;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 18px;
+          border: 0;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .footer_btm {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    padding-top: 30px;
+
+    p {
+      @include font(17px, 500);
+
+      a {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+
+/* scroll top part start */
+
+.scroll-to-top {
+  display: inline-block;
+  background-color: $secondary;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  position: fixed;
+  bottom: -60px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  z-index: 99;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scroll-to-top::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 1;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+}

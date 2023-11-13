@@ -1,0 +1,45 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.notification__list {
+  position: relative;
+  padding: 10px 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #ddd;
+    content: "";
+    border-radius: 10px;
+  }
+
+  li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    @include font(17px, 500);
+    color: $black;
+    transition: all linear .2s;
+    small{
+      @include font(13px, 500);
+      color: red;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $white;
+      border: 2px solid $black;
+      content: "";
+      transition: all linear .2s;
+    }
+  }
+}

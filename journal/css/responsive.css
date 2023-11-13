@@ -1,0 +1,211 @@
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .registration_page .right_side {
+    padding: 50px 24px 50px 0;
+  }
+  .registration_page .left_side .info h4 {
+    font-size: 28px;
+  }
+  .registration_page .left_side .info h5 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .registration_page .right_side {
+    padding: 50px 24px 50px 0;
+  }
+  .registration_page .left_side .info h4 {
+    font-size: 28px;
+  }
+  .registration_page .left_side .info h5 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991.98px) {
+  header {
+    padding: 12px 0;
+  }
+  main {
+    padding-top: 8px;
+  }
+  main .left_sidebar {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+    height: 100%;
+    width: 320px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    left: -320px;
+    transition: all 0.4s ease 0s;
+  }
+  main .left_sidebar .profile_widget {
+    box-shadow: none;
+  }
+  main .left_sidebar .main_menu .active a {
+    color: #ffffff !important;
+    background-color: #00ADEF !important;
+  }
+  main .left_sidebar .main_menu .active h5 {
+    color: #ffffff !important;
+  }
+  main .left_sidebar .main_menu a h5 {
+    color: #0A0F26 !important;
+  }
+  main .left_sidebar .main_menu li a:hover {
+    background-color: #00ADEF !important;
+  }
+  main .left_sidebar .main_menu li a:hover i {
+    color: #fff !important;
+  }
+  main .left_sidebar .main_menu li a:hover h5 {
+    color: #fff !important;
+  }
+  main .left_sidebar .main_menu li a .logout {
+    color: #EF4444 !important;
+  }
+  main .show_mobile_sidebar {
+    left: 0 !important;
+    transition: 0.5s;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .right_info .dashboard_info .top_short_info .short_info_item {
+    padding: 25px 20px;
+  }
+  .common__title {
+    font-size: 22px;
+  }
+  .login_page .left_info {
+    position: static;
+    width: 100%;
+    display: none !important;
+  }
+  .login_page .right_info {
+    position: static;
+    width: 100%;
+  }
+  .login_page .login_box {
+    height: auto;
+  }
+  .registration_page .right_side .top_title h2 {
+    font-size: 30px;
+  }
+  .registration_page .right_side .top_title h4 {
+    font-size: 22px;
+  }
+  .registration_page .right_side {
+    padding: 30px 12px;
+  }
+  .registration_page .right_side fieldset {
+    padding: 30px 14px;
+  }
+  .registration_page .right_side .submit_btn {
+    min-width: 100%;
+  }
+  .registration_page {
+    max-width: 576px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575.98px) {
+  .common__title {
+    font-size: 20px;
+  }
+  header .container-fluid {
+    padding: 0px 12px;
+  }
+  .left_logo img {
+    width: 160px;
+  }
+  header .container-fluid .right_information .notification {
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+  }
+  header .container-fluid .right_information .prf img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .login_page .left_info {
+    position: static;
+    width: 100%;
+    display: none !important;
+  }
+  .login_page .right_info {
+    position: static;
+    width: 100%;
+  }
+  .login_page .login_box {
+    height: auto;
+  }
+  .registration_page .right_side .top_title h2 {
+    font-size: 30px;
+  }
+  .registration_page .right_side .top_title h4 {
+    font-size: 22px;
+  }
+  .registration_page .right_side {
+    padding: 30px 12px;
+  }
+  .registration_page .right_side fieldset {
+    padding: 30px 14px;
+  }
+  .registration_page .right_side .submit_btn {
+    min-width: 100%;
+  }
+  .edit-profile fieldset {
+    padding: 30px 14px;
+  }
+  main .right_info .dashboard_info .common_block {
+    padding: 22px 14px;
+  }
+  .edit-profile .submit_btn {
+    min-width: 100%;
+  }
+  .document__submission__pdf .document__submission__widget {
+    padding: 12px;
+  }
+  .document__submission__pdf .document__submission__widget p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .uploaded__pdf__file .text h5 {
+    font-size: 14px;
+  }
+  main fieldset {
+    padding: 24px 14px;
+  }
+  .conversation__panel .simplebar__content .user-msgbox {
+    max-width: 100%;
+  }
+  .conversation__panel .simplebar__content .admin-msgbox {
+    max-width: 100%;
+  }
+  .conversation__panel .simplebar__content .admin-msgbox .media .media-body span {
+    top: 0px;
+  }
+  .conversation__panel .simplebar__content .admin-msgbox .media .media-body p {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 8px 20px;
+  }
+  .conversation__panel .simplebar__content .user-msgbox .media .media-body p {
+    padding: 8px 20px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .attachment__panel {
+    padding: 2px 7px;
+  }
+  .attachment__panel .uploaded__file img {
+    width: 35px;
+    height: 35px;
+  }
+  .attachment__panel .option {
+    padding-left: 20px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

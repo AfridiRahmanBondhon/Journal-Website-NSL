@@ -1,0 +1,46 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+#cookies {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  background-color: $primary;
+  padding: 24px 0;
+  z-index: 99;
+  display: none;
+
+  .info {
+    p {
+      @include font(15px, 500);
+      line-height: 26px;
+      position: relative;
+      padding-left: 24px;
+      &::before{
+        position: absolute;
+        top: 1px;
+        left: 0;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        content: "\f059";
+      }
+    }
+  }
+
+  #cookies-btn {
+    background-color: $secondary;
+    color: $white;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 20px;
+    @include font(13px, 500);
+    text-transform: uppercase;
+    transform: skewX(-7deg);
+    transition: 0.3s;
+    &:hover{
+      background-color: $white;
+      color: $black;
+    }
+  }
+}

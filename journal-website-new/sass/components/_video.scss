@@ -1,0 +1,106 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.video_section {
+  padding-top: 100px;
+
+  .video {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+
+    img{
+      border-radius: 16px;
+    }
+  }
+
+  .video_shape {
+    width: 100px;
+    bottom: -13px;
+    left: -123px;
+    position: absolute;
+  }
+
+
+  .vidplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+
+    .play {
+      fill: $secondary;
+      width: 20px;
+    }
+  }
+
+  .video-icon::after {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 20px solid rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+  }
+
+  .video-icon::before {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 20px solid rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+  }
+
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale3d(2, 2, 1);
+    }
+  }
+
+}

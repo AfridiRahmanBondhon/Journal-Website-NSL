@@ -1,0 +1,67 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.faq {
+  padding-top: 100px;
+  margin-bottom: -30px;
+}
+
+.faq .section-title-one {
+  margin-bottom: 30px;
+}
+
+
+.faq .faq-body .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq .faq-body .accordion-item {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+.faq .faq-body .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.faq .faq-body .accordion-button {
+  border-radius: 5px;
+  border-bottom: 1px solid transparent;
+  padding: 26px 24px;
+  position: relative;
+  @include font(20px, 600)
+}
+
+.faq .faq-body .accordion-body {
+  padding: 11px 24px !important;
+}
+
+.faq .faq-body .accordion-button:not(.collapsed) {
+  border-color: #ddd;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.faq .faq-body .accordion-button:focus {
+  border-color: #ddd;
+  box-shadow: none !important;
+}
+
+.faq .faq-body .accordion-button::after {
+  background-image: url(../images/plus-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  background-color: $secondary;
+  border-radius: 5px;
+  transform: unset;
+  position: absolute;
+  right: -20px;
+}
+
+.faq .faq-body .accordion-button:not(.collapsed)::after {
+  background-image: url(../images/minus-icon.svg);
+}
